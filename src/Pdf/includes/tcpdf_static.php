@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Vatttan\Apdf\Pdf\includes;
+namespace riftwebdev\Apdf\Pdf\includes;
 class tcpdf_static {
 
 

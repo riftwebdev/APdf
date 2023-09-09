@@ -6,13 +6,13 @@ This package develope and simplify TCPDF(php pure library) for Laravel.
 1.Run this comman:
 
  ```  
- composer require vatttan/apdf
+ composer require riftwebdev/apdf
  ```
 Now its available in every where you want like Views,Controllers,....
 For example, in view you can use:
  ```  
 use Illuminate\Support\Facades\Route;
-use Vatttan\Apdf\Apdf;
+use riftwebdev\Apdf\Apdf;
 Route::get('/', function () {
     $apdf = new Apdf();
     $apdf->print('<p style="text-align: right">وطن ، یک شکوه پابرجا...</p>');

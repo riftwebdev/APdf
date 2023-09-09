@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Vatttan\Apdf;
+namespace riftwebdev\Apdf;
 
-use Vatttan\Apdf\Pdf\TCPDF;
+use riftwebdev\Apdf\Pdf\TCPDF;
 
 class Apdf extends TCPDF
 {

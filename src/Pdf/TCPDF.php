@@ -1,5 +1,5 @@
 <?php
-namespace Vatttan\Apdf\Pdf;
+namespace riftwebdev\Apdf\Pdf;
 //use \vendor\Pdf\includes;
 // TCPDF configuration
 //use includes\tcpdf_static;
@@ -7,7 +7,7 @@ use TCPDF_COLORS;
 use TCPDF_FONT_DATA;
 use TCPDF_FONTS;
 use TCPDF_IMAGES;
-use Vatttan\Apdf\Pdf\includes\tcpdf_static;
+use riftwebdev\Apdf\Pdf\includes\tcpdf_static;
 
 require_once(dirname(__FILE__).'/tcpdf_autoconfig.php');
 // TCPDF static font methods and data

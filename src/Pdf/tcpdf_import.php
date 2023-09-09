@@ -1,7 +1,7 @@
 <?php
 
 
-require_once(dirname(__FILE__).'/tcpdf.php');
+require_once(dirname(__FILE__) . '/TCPDF.php');
 
 require_once(dirname(__FILE__).'/tcpdf_parser.php');
 

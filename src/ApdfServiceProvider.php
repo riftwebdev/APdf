@@ -1,6 +1,6 @@
 <?php
 
-namespace Vatttan\Apdf;
+namespace riftwebdev\Apdf;
 
 use Illuminate\Support\ServiceProvider;
 
