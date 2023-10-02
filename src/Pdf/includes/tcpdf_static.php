@@ -1,8 +1,5 @@
 <?php
-
-
-namespace riftwebdev\Apdf\Pdf\includes;
-class tcpdf_static {
+class TCPDF_STATIC {
 
 
 	private static $tcpdf_version = '6.3.5';
@@ -158,7 +155,7 @@ class tcpdf_static {
 
 
 	public static function getObjFilename($type='tmp', $file_id='') {
-		return tempnam(K_PATH_CACHE, '__tcpdf_'.$file_id.'_'.$type.'_'.md5(tcpdf_static::getRandomSeed()).'_');
+		return tempnam(K_PATH_CACHE, '__tcpdf_'.$file_id.'_'.$type.'_'.md5(TCPDF_STATIC::getRandomSeed()).'_');
 	}
 
 
@@ -1200,7 +1197,7 @@ class tcpdf_static {
 		// create new language array of patterns
 		$patterns = array();
 		foreach($patterns_array as $val) {
-			if (!tcpdf_static::empty_string($val)) {
+			if (!TCPDF_STATIC::empty_string($val)) {
 				$val = trim($val);
 				$val = str_replace('\'', '\\\'', $val);
 				$key = preg_replace('/[0-9]+/', '', $val);
@@ -2107,7 +2104,7 @@ class tcpdf_static {
 	}
 
 
-} // END OF tcpdf_static CLASS
+} // END OF TCPDF_STATIC CLASS
 
 //============================================================+
 // END OF FILE

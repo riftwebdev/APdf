@@ -70,7 +70,7 @@ class TCPDF_IMAGES {
 
 	public static function _parsejpeg($file) {
 		// check if is a local file
-		if (!@tcpdf_static::file_exists($file)) {
+		if (!@TCPDF_STATIC::file_exists($file)) {
 			return false;
 		}
 		$a = getimagesize($file);
@@ -117,7 +117,7 @@ class TCPDF_IMAGES {
 		$offset = 0;
 		while (($pos = strpos($data, "ICC_PROFILE\0", $offset)) !== false) {
 			// get ICC sequence length
-			$length = (tcpdf_static::_getUSHORT($data, ($pos - 2)) - 16);
+			$length = (TCPDF_STATIC::_getUSHORT($data, ($pos - 2)) - 16);
 			// marker sequence number
 			$msn = max(1, ord($data[($pos + 12)]));
 			// number of markers (total of APP2 used)
@@ -159,8 +159,8 @@ class TCPDF_IMAGES {
 			//Incorrect PNG file
 			return false;
 		}
-		$w = tcpdf_static::_freadint($f);
-		$h = tcpdf_static::_freadint($f);
+		$w = TCPDF_STATIC::_freadint($f);
+		$h = TCPDF_STATIC::_freadint($f);
 		$bpc = ord(fread($f, 1));
 		$ct = ord(fread($f, 1));
 		if ($ct == 0) {
@@ -197,16 +197,16 @@ class TCPDF_IMAGES {
 		$trns = '';
 		$data = '';
 		$icc = false;
-		$n = tcpdf_static::_freadint($f);
+		$n = TCPDF_STATIC::_freadint($f);
 		do {
 			$type = fread($f, 4);
 			if ($type == 'PLTE') {
 				// read palette
-				$pal = tcpdf_static::rfread($f, $n);
+				$pal = TCPDF_STATIC::rfread($f, $n);
 				fread($f, 4);
 			} elseif ($type == 'tRNS') {
 				// read transparency info
-				$t = tcpdf_static::rfread($f, $n);
+				$t = TCPDF_STATIC::rfread($f, $n);
 				if ($ct == 0) { // DeviceGray
 					$trns = array(ord($t[1]));
 				} elseif ($ct == 2) { // DeviceRGB
@@ -222,7 +222,7 @@ class TCPDF_IMAGES {
 				fread($f, 4);
 			} elseif ($type == 'IDAT') {
 				// read image data block
-				$data .= tcpdf_static::rfread($f, $n);
+				$data .= TCPDF_STATIC::rfread($f, $n);
 				fread($f, 4);
 			} elseif ($type == 'iCCP') {
 				// skip profile name
@@ -237,16 +237,16 @@ class TCPDF_IMAGES {
 					return false;
 				}
 				// read ICC Color Profile
-				$icc = tcpdf_static::rfread($f, ($n - $len - 2));
+				$icc = TCPDF_STATIC::rfread($f, ($n - $len - 2));
 				// decompress profile
 				$icc = gzuncompress($icc);
 				fread($f, 4);
 			} elseif ($type == 'IEND') {
 				break;
 			} else {
-				tcpdf_static::rfread($f, $n + 4);
+				TCPDF_STATIC::rfread($f, $n + 4);
 			}
-			$n = tcpdf_static::_freadint($f);
+			$n = TCPDF_STATIC::_freadint($f);
 		} while ($n);
 		if (($colspace == 'Indexed') AND (empty($pal))) {
 			// Missing palette
