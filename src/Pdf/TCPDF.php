@@ -19,7 +19,7 @@ require_once(dirname(__FILE__) . '/includes/tcpdf_colors.php');
 // TCPDF static image methods and data
 require_once(dirname(__FILE__) . '/includes/tcpdf_images.php');
 // TCPDF static methods and data
-require_once(dirname(__FILE__) . '/includes/TCPDF_STATIC.php');
+require_once(dirname(__FILE__) . '/includes/tcpdf_static.php');
 class TCPDF {
 
 	protected $page;
