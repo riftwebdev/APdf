@@ -1,6 +1,6 @@
 <?php
 //============================================================+
-// File name   : qrcode.php
+// File name   : QRcode.php
 // Version     : 1.0.010
 // Begin       : 2010-03-22
 // Last Update : 2012-07-25

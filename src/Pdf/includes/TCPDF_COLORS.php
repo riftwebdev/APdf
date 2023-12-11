@@ -1,6 +1,6 @@
 <?php
 //============================================================+
-// File name   : tcpdf_colors.php
+// File name   : TCPDF_COLORS.php
 // Version     : 1.0.004
 // Begin       : 2002-04-09
 // Last Update : 2014-04-25

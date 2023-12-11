@@ -1,6 +1,6 @@
 <?php
 //============================================================+
-// File name   : datamatrix.php
+// File name   : Datamatrix.php
 // Version     : 1.0.008
 // Begin       : 2010-06-07
 // Last Update : 2014-05-06

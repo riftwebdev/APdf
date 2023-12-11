@@ -3,7 +3,7 @@
 
 require_once(dirname(__FILE__) . '/TCPDF.php');
 
-require_once(dirname(__FILE__).'/tcpdf_parser.php');
+require_once(dirname(__FILE__) . '/TCPDF_PARSER.php');
 
 
 class TCPDF_IMPORT extends TCPDF {

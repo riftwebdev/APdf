@@ -1,6 +1,6 @@
 <?php
 //============================================================+
-// File name   : tcpdf_filters.php
+// File name   : TCPDF_FILTERS.php
 // Version     : 1.0.001
 // Begin       : 2011-05-23
 // Last Update : 2014-04-25

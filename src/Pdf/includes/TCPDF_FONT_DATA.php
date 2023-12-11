@@ -1,6 +1,6 @@
 <?php
 //============================================================+
-// File name   : tcpdf_font_data.php
+// File name   : TCPDF_FONT_DATA.php
 // Version     : 1.0.001
 // Begin       : 2008-01-01
 // Last Update : 2013-04-01

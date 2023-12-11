@@ -11,15 +11,15 @@ use TCPDF_STATIC;
 
 require_once(dirname(__FILE__).'/tcpdf_autoconfig.php');
 // TCPDF static font methods and data
-require_once(dirname(__FILE__) . '/includes/tcpdf_font_data.php');
+require_once(dirname(__FILE__) . '/includes/TCPDF_FONT_DATA.php');
 // TCPDF static font methods and data
-require_once(dirname(__FILE__) . '/includes/tcpdf_fonts.php');
+require_once(dirname(__FILE__) . '/includes/TCPDF_FONTS.php');
 // TCPDF static color methods and data
-require_once(dirname(__FILE__) . '/includes/tcpdf_colors.php');
+require_once(dirname(__FILE__) . '/includes/TCPDF_COLORS.php');
 // TCPDF static image methods and data
-require_once(dirname(__FILE__) . '/includes/tcpdf_images.php');
+require_once(dirname(__FILE__) . '/includes/TCPDF_IMAGES.php');
 // TCPDF static methods and data
-require_once(dirname(__FILE__) . '/includes/tcpdf_static.php');
+require_once(dirname(__FILE__) . '/includes/TCPDF_STATIC.php');
 class TCPDF {
 
 	protected $page;
@@ -11581,7 +11581,7 @@ class TCPDF {
 		if (TCPDF_STATIC::empty_string(trim($code))) {
 			return;
 		}
-		require_once(dirname(__FILE__).'/tcpdf_barcodes_1d.php');
+		require_once(dirname(__FILE__) . '/TCPDFBarcode.php');
 		// save current graphic settings
 		$gvars = $this->getGraphicVars();
 		// create new barcode object
@@ -11876,7 +11876,7 @@ class TCPDF {
 		if (TCPDF_STATIC::empty_string(trim($code))) {
 			return;
 		}
-		require_once(dirname(__FILE__).'/tcpdf_barcodes_2d.php');
+		require_once(dirname(__FILE__).'/TCPDF2DBarcode.php');
 		// save current graphic settings
 		$gvars = $this->getGraphicVars();
 		// create new barcode object

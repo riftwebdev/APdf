@@ -35,7 +35,7 @@
 
 
 
-require_once(dirname(__FILE__) . '/includes/tcpdf_filters.php');
+require_once(dirname(__FILE__) . '/includes/TCPDF_FILTERS.php');
 
 
 class TCPDF_PARSER {
