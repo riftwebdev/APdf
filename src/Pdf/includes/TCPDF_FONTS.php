@@ -33,9 +33,6 @@
 
 
 
-use TCPDF_STATIC;
-
-
 class TCPDF_FONTS {
 
 
